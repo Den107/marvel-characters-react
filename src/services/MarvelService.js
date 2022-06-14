@@ -25,6 +25,7 @@ class MarvelService {
 
     static _transformCharacter = char => {
         return {
+            id: char.id,
             name: char.name,
             description: char.description || 'Description not found...',
             thumbnail: `${char.thumbnail.path}.${char.thumbnail.extension}`,

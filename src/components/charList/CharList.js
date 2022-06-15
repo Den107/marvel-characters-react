@@ -3,6 +3,7 @@ import {Component} from "react";
 import MarvelService from "../../services/MarvelService";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
+import PropTypes from "prop-types";
 
 
 class CharList extends Component {
@@ -106,6 +107,10 @@ class CharList extends Component {
             </div>
         )
     }
+}
+
+CharList.propTypes={
+    onCharSelected: PropTypes.func.isRequired
 }
 
 export default CharList;
